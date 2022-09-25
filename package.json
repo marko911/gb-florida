@@ -1,0 +1,24 @@
+{
+  "name": "gb-florida",
+  "version": "1.0.0",
+  "description": "",
+  "main": "datepicker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marko911/gb-florida.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marko911/gb-florida/issues"
+  },
+  "homepage": "https://github.com/marko911/gb-florida#readme",
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "node-fetch": "^3.2.10",
+    "request": "^2.88.2"
+  }
+}
