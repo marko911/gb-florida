@@ -6837,6 +6837,11 @@ figcaption {
   font-family: Montserrat, sans-serif;
 }
 
+
+#rates-wrapper {
+  display:flex;
+}
+
 .intro-icon-copy {
   font-family: 'Fa solid 900', sans-serif;
   color: #666;
