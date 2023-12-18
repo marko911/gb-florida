@@ -6646,7 +6646,7 @@ figcaption {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width:50%;
   padding-right: 5%;
   padding-left: 0%;
   -webkit-box-pack: end;
@@ -6658,6 +6658,12 @@ figcaption {
   -ms-flex-align: center;
   align-items: center;
 }
+
+.flex-1 {
+  flex: 1 0 auto; 
+}
+
+
 
 .div-block-13.div13-right {
   padding-left: 5%;
