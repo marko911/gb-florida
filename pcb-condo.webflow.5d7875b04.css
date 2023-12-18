@@ -6544,7 +6544,7 @@ figcaption {
 .div-block-6 {
   position: relative;
   overflow: hidden;
-  width: 18.4%;
+  width: 18%;
   margin-top: 20px;
   margin-right: 2%;
   margin-bottom: 10px;
@@ -6578,9 +6578,11 @@ figcaption {
   top: 0px;
   right: 0px;
   bottom: 0px;
-  background-image: url("https://uploads-ssl.webflow.com/621584661325fcba6b07f5ce/6329f53171e61425a94ea0d1_DSC06687-resized%201728.jpg");
+  background-image: url("https://imagedelivery.net/OnMBHZ1Vl1a2W_jlBO5uVw/e7042b66-bd80-4efc-9163-c49041fd5800/public");
   background-position: 50% 50%;
   background-size: cover;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 .cover-image.cover-2 {
