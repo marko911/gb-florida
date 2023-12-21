@@ -4957,14 +4957,14 @@ figcaption {
   position: absolute;
   left: auto;
   top: 20px;
-  right: 100px;
+  right: 80px;
   bottom: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 60px;
-  height: 60px;
+  width: 3rem;
+  height: 3rem;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -4975,6 +4975,15 @@ figcaption {
   align-items: center;
   border-radius: 1px;
   background-color: #f8f8f8;
+}
+
+@media (min-width: 1560px) {
+  .arrow-link {
+    right: 7%;
+  }
+  .arrow-link.next {
+    right: 3%!important;
+  }
 }
 
 .arrow-link.next {

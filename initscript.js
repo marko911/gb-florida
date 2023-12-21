@@ -1,6 +1,8 @@
 let reservedDates = [];
 let startDateSelected;
 let endDateSelected;
+let rates;
+let numDays;
 
 const getDaysArray = function (s, e) {
   for (var a = [], d = new Date(s); d < e; d.setDate(d.getDate() + 1)) {
@@ -62,7 +64,8 @@ function setStartPickerDates() {
 }
 // Initialize when ready
 $(document).ready(async function () {
-  getRates();
+  rates = await getRates();
+  console.log('fast console rates', {rates});  
   if (window.innerWidth < 768) {
     $('[data-toggle="datepicker-start"]').attr("readonly", "readonly");
     $('[data-toggle="datepicker-end"]').attr("readonly", "readonly");
@@ -86,17 +89,31 @@ function filterStart(date) {
 const startPicker = $('[data-toggle="datepicker-start"]');
 const endPicker = $('[data-toggle="datepicker-end"]');
 
-startPicker.on("click", () => {
-  startDateSelected = startPicker.datepicker("getDate");
-});
+// startPicker.on("click", () => {
+//   startDateSelected = startPicker.datepicker("getDate");
+// });
 
 endPicker.on("click", () => {
-  endDateSelected = endPicker.datepicker("getDate");
+  // endDateSelected = endPicker.datepicker("getDate");
+  endPicker.data('datepicker').setViewDate(startDateSelected);
+  console.log(  'check obj datepicker', endPicker.data('datepicker') );
+// endPicker.datepicker.setViewDate(endDateSelected);
 });
 
+endPicker.on("pick.datepicker", (e) => {
+  endDateSelected = endPicker.datepicker('getDate');
+  numDays = (endDateSelected - startDateSelected) / (1000 * 60 * 60 * 24);
+  console.log('numDays', numDays);
+  // endPicker.datepicker("reset");
+  // endPicker.datepicker('setStartDate', startDateSelected);
+  // endPicker.datepicker('setEndDate', endDateSelected);
+})
+
 startPicker.on("pick.datepicker", (e) => {
-  console.log("resetting end picker");
-  endPicker.datepicker("reset");
+  // endPicker.datepicker("reset");
+  startDateSelected = startPicker.datepicker('getDate');
+
+  endPicker.datepicker('setStartDate', startDateSelected);
 });
 
 const getRates = async () => {

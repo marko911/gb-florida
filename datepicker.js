@@ -423,6 +423,17 @@
       return formatted ? this.formatDate(date) : new Date(date);
     },
 
+     setViewDate: function setViewDate(date) {
+    if (!(date instanceof Date)) {
+      date = new Date(date);
+    }
+    
+    if (!isNaN(date.getTime())) {
+      this.viewDate = new Date(date.getFullYear(), date.getMonth(), 1);
+      this.render(); // Re-render the datepicker
+    }
+  },
+
     /**
      * Set the current date with a new date
      *
@@ -813,6 +824,7 @@
       });
       this.$week.html(items.join(''));
     },
+ 
     renderYears: function renderYears() {
       var options = this.options,
           startDate = this.startDate,
@@ -1289,7 +1301,21 @@
           }
         }
       }
-    }, {
+    },
+      {
+        key: "setViewDate",
+        value: function setViewDate(date) {
+    if (!(date instanceof Date)) {
+      date = new Date(date);
+    }
+    
+    if (!isNaN(date.getTime())) {
+      this.viewDate = new Date(date.getFullYear(), date.getMonth(), 1);
+      this.render(); // Re-render the datepicker
+    }
+}
+      },
+      {
       key: "showView",
       value: function showView(view) {
         var $yearsPicker = this.$yearsPicker,
