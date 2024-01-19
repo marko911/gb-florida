@@ -154,7 +154,6 @@ endPicker.on('pick.datepicker', (e) => {
 
   // numDays.value = Object.values(daysToRates).length;
 
-  console.log('Days to Rates:', daysToRates);
   renderRates(daysToRates);
 });
 
@@ -185,10 +184,10 @@ function renderRates(daysToRates) {
   // Add the subtotal, tax, and total rows
   htmlContent += `
     <div class="totals">
-    <div class="total-row"><strong>Subtotal</strong><span>$${subtotal.toFixed(2)}</span></div>
+    <div class="total-row">Subtotal</strong><span>$${subtotal.toFixed(2)}</span></div>
 
-    <div class="total-row"><strong>Cleaning Fee</strong><span>$${cleaningFee.toFixed(2)}</span></div>
-    <div class="total-row"><strong>Tax</strong><span>$${tax.toFixed(2)}</span></div>
+    <div class="total-row">Cleaning Fee<span>$${cleaningFee.toFixed(2)}</span></div>
+    <div class="total-row">Tax<span>$${tax.toFixed(2)}</span></div>
     <div class="total-row"><strong>Total</strong><span>$${total.toFixed(2)}</span></div>
     </div>
     `;
@@ -201,13 +200,10 @@ function renderRates(daysToRates) {
 
 
 startPicker.on('pick.datepicker', (e) => {
-  // endPicker.datepicker("reset");
   startDateSelected = startPicker.datepicker('getDate');
-  console.log('fast console startDateSelected', { startDateSelected });
 
-  endPicker.datepicker('setDate', startDateSelected).trigger('pick.datepicker');
+  // endPicker.datepicker('setDate', startDateSelected).trigger('pick.datepicker');
   startPicker.datepicker('hide');
-  // endPicker.datepicker('show');
 });
 
 const getRates = async () => {
