@@ -6495,6 +6495,11 @@ figcaption {
   display: block;
 }
 
+#price-box {
+  position: absolute;
+  /* visibility: hidden; */
+}
+
 .image-2 {
   position: absolute;
   left: 16px;

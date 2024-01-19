@@ -16,7 +16,6 @@ module.exports = {
     'quotes': ['error', 'single'], // Enforce the consistent use of single quotes
     'semi': ['error', 'always'], // Require semicolons at the end of statements
     'no-unused-vars': ['warn'], // Warn about variables that are declared but not used
-    'no-console': ['warn'], // Warn about console statements which are useful for debugging but should be removed in production
     'eqeqeq': ['error', 'always'], // Enforce the use of === and !== over == and !=
     'curly': ['error', 'all'], // Require following curly brace conventions
     'no-multi-spaces': 'error', // Disallow multiple spaces that are not for indentation

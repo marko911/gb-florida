@@ -1051,14 +1051,14 @@
           _disabled = filter.call($element, date, 'day') === false;
         }
 
-        nextItems.push(this.createItem({
-          disabled: _disabled,
-          picked: picked,
-          highlighted: nextViewYear === thisYear && nextViewMonth === thisMonth && date.getDate() === thisDay,
-          muted: true,
-          text: i,
-          view: 'day next'
-        }));
+        // nextItems.push(this.createItem({
+        //   disabled: _disabled,
+        //   picked: picked,
+        //   highlighted: nextViewYear === thisYear && nextViewMonth === thisMonth && date.getDate() === thisDay,
+        //   muted: true,
+        //   text: i,
+        //   view: 'day next'
+        // }));
       } // Days of current month
       // -----------------------------------------------------------------------
 
